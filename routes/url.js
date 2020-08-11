@@ -3,7 +3,7 @@ const express = require("express");
 const validUrl = require("valid-url");
 const shortid = require("shortid");
 require('dotenv/config');
-// config   = require('config');
+config   = require('config');
 const Url = require("../models/Url");
 const router = express.Router();
 // @route   POST /shorten
@@ -11,7 +11,7 @@ const router = express.Router();
 const baseUrl = "http://localhost:3000";
 router.post('/shorten', async (req, res) => {
 	const { longUrl } = req.body;
-	const baseUrl = config.get('baseUrl');
+	// const baseUrl = config.get('baseUrl');
 
 	// check base url
 	if(!validUrl.isUri(baseUrl)){

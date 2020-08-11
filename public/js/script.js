@@ -25,7 +25,7 @@ function getURL() {
             longUrl: site
         })
         .then(res => {
-            urlInput.value = res.data.url.shortUrl;
+            urlInput.value = res.data.shortUrl;
             results.classList.toggle("hidden");
             submit.classList.toggle("hidden");
             clear.classList.toggle("hidden");
@@ -34,7 +34,7 @@ function getURL() {
         .catch(err => {
             if (err) {
                 urlInput.value = "";
-                urlInput.placeholder = err.response.data.msg;
+                urlInput.placeholder = err;
                 setTimeout(() => {
                     urlInput.placeholder = initial;
                 }, 5000);
