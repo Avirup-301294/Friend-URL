@@ -21,7 +21,7 @@ function shorten() {
 function getURL() {
     const site = urlInput.value;
     axios
-        .post("/shorten", {
+        .post("/api/url/shorten", {
             longUrl: site
         })
         .then(res => {
