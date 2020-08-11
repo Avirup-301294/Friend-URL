@@ -21,11 +21,11 @@ function shorten() {
 function getURL() {
     const site = urlInput.value;
     axios
-        .post("/api/url/shorten", {
+        .post("/shorten", {
             longUrl: site
         })
         .then(res => {
-            urlInput.value = res.data.shortUrl;
+            urlInput.value = res.data.url.shortUrl;
             results.classList.toggle("hidden");
             submit.classList.toggle("hidden");
             clear.classList.toggle("hidden");
@@ -34,7 +34,7 @@ function getURL() {
         .catch(err => {
             if (err) {
                 urlInput.value = "";
-                urlInput.placeholder = err;
+                urlInput.placeholder = err.response.data.msg;
                 setTimeout(() => {
                     urlInput.placeholder = initial;
                 }, 5000);
