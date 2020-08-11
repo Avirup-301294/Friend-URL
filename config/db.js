@@ -1,10 +1,9 @@
 const mongoose = require('mongoose'),
       config = require('config'),
-	     db = config.get('mongoURI');
-var uri = process.env.MongoURI || db;
+	     db = process.env.URLSHORTENERURI || config.get('mongoURI');
 const connectDB = async () => {
 	try {
-		await mongoose.connect(uri, {
+		await mongoose.connect(db, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true
 		});
