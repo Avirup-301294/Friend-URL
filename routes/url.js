@@ -3,7 +3,7 @@ const express = require("express");
 const validUrl = require("valid-url");
 const shortid = require("shortid");
 require('dotenv/config');
-config   = require('config');
+// config   = require('config');
 const Url = require("../models/Url");
 const router = express.Router();
 // @route   POST /api/url/shorten
