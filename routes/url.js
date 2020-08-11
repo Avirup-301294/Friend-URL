@@ -56,7 +56,8 @@ require("dotenv/config");
 
 // Importing Database Model
 const Url = require("../models/Url");
-
+config   = require('config');
+const baseUrl = config.get('baseUrl');
 // Initialising router object
 const router = express.Router();
 
@@ -65,7 +66,7 @@ const router = express.Router();
 router.post("/shorten", (req, res) => {
     const { longUrl } = req.body;
 
-    const baseUrl = process.env.baseURL || `https://localhost:3000`;
+    // const baseUrl = process.env.baseURL || `https://localhost:3000`;
 
     // Checking if user is trying to shorted our URL
     if (longUrl.includes(baseUrl)) {
