@@ -1,0 +1,4 @@
+{
+	"mongoURI": process.env.MongoURI,
+	"baseUrl": "http://localhost:3000"
+}
