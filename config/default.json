@@ -1,4 +1,4 @@
 {
-	"mongoURI":"mongodb+srv://avirup:avirup@cluster0.ji1in.mongodb.net/<dbname>?retryWrites=true&w=majority",
+	"mongoURI": "process.env.MongoURI" || "mongodb://localhost:27017/url-short",
 	"baseUrl": "http://localhost:3000"
 }
