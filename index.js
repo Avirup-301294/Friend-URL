@@ -3,19 +3,17 @@ var app = express();
 const path = require("path");
 var mongoose = require('mongoose');
 // connectDB = require('./config/db');
+require("dotenv/config");
+var Url = process.env.DATABASEURL || "mongodb://localhost:27017/url-short";
+mongoose.connect(Url, {useUnifiedTopology: true,useNewUrlParser: true})
+  .then(() =>
+    console.log("Successfully connected to MongoDB")
+  ).catch(err =>
+    console.log(`Error connecting to MongoDB: ${err}`)
+  );
+
 app.set('view engine', 'ejs');
-//connectDB(); //conect to database
-var uri = process.env.DATABASEURL ||`mongodb://localhost:27017/url-short`;
-mongoose.connect(uri,{
-	useNewUrlParser: true,
-	useCreateIndex: true,
-	useFindAndModify: false,
-	useUnifiedTopology: true
-}).then(() => {
-	console.log("connect to db");
-}).catch(err => {
-	console.log("Error:",err.message);
-});
+// connectDB(); //conect to database
 // ExpressJS Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -28,4 +26,5 @@ app.use("/", require("./routes/index"));
 app.use("/api/url", require("./routes/url"));
 
 // Setting Port to listen to
-app.listen(3000, () => console.log('Server is running on port 3000'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
