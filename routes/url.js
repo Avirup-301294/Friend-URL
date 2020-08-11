@@ -6,7 +6,6 @@ require('dotenv').config();
 config   = require('config');
 const Url = require("../models/Url");
 const router = express.Router();
-
 // @route   POST /api/url/shorten
 // @desc    Create short url
 router.post('/shorten', async (req, res) => {
