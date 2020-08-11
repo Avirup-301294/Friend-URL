@@ -2,9 +2,20 @@ var express = require('express');
 var app = express();
 const path = require("path");
 var mongoose = require('mongoose');
-connectDB = require('./config/db');
+// connectDB = require('./config/db');
 app.set('view engine', 'ejs');
-connectDB(); //conect to database
+//connectDB(); //conect to database
+var uri = process.env.DATABASEURL ||`mongodb://localhost:27017/url-short`;
+mongoose.connect(uri,{
+	useNewUrlParser: true,
+	useCreateIndex: true,
+	useFindAndModify: false,
+	useUnifiedTopology: true
+}).then(() => {
+	console.log("connect to db");
+}).catch(err => {
+	console.log("Error:",err.message);
+});
 // ExpressJS Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
