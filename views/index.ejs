@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto"  rel="stylesheet"/>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <title>Url Shortener Service</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div style="margin: 0 auto;">
+        <a class="navbar-brand" href="/"><h2>Friend Url</h2></a>
+            <a href="https://github.com/Avirup-301294">
+              <img class="icon" src="https://image.flaticon.com/icons/png/512/25/25231.png">
+            </a>
+        </div>
+
+    </nav>
+  <div class="container" style="padding-top:200px;">
+      <div class="jumbotron" style="background: #ecf0f1;">
+        <div class="text-center">
+          <h2><i class="fas fa-link animated rubberBand"></i> URL Shorterner Service</h2>
+        </div>
+          <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Enter The URL</span>
+              </div>
+              <input type="text" class="form-control urlInput" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Paste your link here..." required >
+          </div>
+          <div class="text-center b">
+              <button class="btn btn-info btn-lg submit urlButton">Submit</button>
+          </div>
+            <div class="results hidden text-center">
+              <button class="copy btn btn-success urlButton">Copy</button>
+              <a href="#" class="btn btn-primary clear hidden text-center">Clear</a>
+            </div>
+      </div>
+  </div>
+    <script src="https://kit.fontawesome.com/b767bbfe51.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
