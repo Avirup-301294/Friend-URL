@@ -8,10 +8,10 @@ const Url = require("../models/Url");
 const router = express.Router();
 // @route   POST /shorten
 // @desc    Create short url
-const baseUrl = "http://localhost:3000";
+// const baseUrl = "http://localhost:3000/api/url/shorten";
 router.post('/shorten', async (req, res) => {
 	const { longUrl } = req.body;
-	// const baseUrl = config.get('baseUrl');
+	const baseUrl = config.get('baseUrl');
 
 	// check base url
 	if(!validUrl.isUri(baseUrl)){

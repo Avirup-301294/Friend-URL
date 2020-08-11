@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 // Routes
 app.use("/", require("./routes/index"));
-app.use("/", require("./routes/url"));
+app.use("/api/url", require("./routes/url"));
 
 // Setting Port to listen to
 const PORT = process.env.PORT || 3000;

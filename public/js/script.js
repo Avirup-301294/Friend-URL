@@ -36,7 +36,7 @@ function getURL() {
                 urlInput.placeholder = err;
                 setTimeout(() => {
                     urlInput.placeholder = initial;
-                }, 5000);
+                }, 3000);
             }
 
             console.error("Error shortening url", err);
