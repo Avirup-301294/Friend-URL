@@ -20,8 +20,7 @@ function shorten() {
 // Function to make post request to backend
 function getURL() {
     const site = urlInput.value;
-    axios
-        .post("/api/url/shorten", {
+    axios.post("/api/url/shorten", {
             longUrl: site
         })
         .then(res => {
