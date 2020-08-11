@@ -53,6 +53,6 @@ Inside the db.js you have to configure the connect with the mongo db
 $ npm start
 
 ## Running the project locally by 
- $ nodemon or node index.js 
+ $ nodemon or node index.js,
  Note that these two above operation will run only after you have connected to mongodb
  $ mongod
