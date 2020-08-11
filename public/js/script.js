@@ -20,23 +20,24 @@ function shorten() {
 // Function to make post request to backend
 function getURL() {
     const site = urlInput.value;
-    axios.post("/api/url/shorten", {
+    axios
+        .post("/api/url/shorten", {
             longUrl: site
         })
         .then(res => {
-            urlInput.value = res.data.shortUrl;
+            urlInput.value = res.data.url.shortUrl;
             results.classList.toggle("hidden");
             submit.classList.toggle("hidden");
             clear.classList.toggle("hidden");
             urlInput.select();
         })
         .catch(err => {
-            if (err) {
+            if (err.response.status !== 200) {
                 urlInput.value = "";
-                urlInput.placeholder = err;
+                urlInput.placeholder = err.response.data.msg;
                 setTimeout(() => {
                     urlInput.placeholder = initial;
-                }, 3000);
+                }, 5000);
             }
 
             console.error("Error shortening url", err);
