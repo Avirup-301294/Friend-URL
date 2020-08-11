@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'),
       config = require('config'),
 	     db = config.get('mongoURI');
        var uri = process.env.MongoURI || db;
