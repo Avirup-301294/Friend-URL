@@ -1,0 +1,6 @@
+POST http://localhost:3000/api/url/shorten
+Content-Type: application/json
+
+{
+"longUrl": "https://www.amazon.com/b/?node=21150111011&ref=af_gw_topcatcard_may_voguelaunch&pf_rd_r=BKKSWH32WTV9WN08KMG3&pf_rd_p=7238008f-24c2-4417-8e7c-d82b3222c0eb&pd_rd_r=4c5a09d0-44b5-438c-b5e9-2cf5da58deca&pd_rd_w=QJOrs&pd_rd_wg=AfIPg"
+}
