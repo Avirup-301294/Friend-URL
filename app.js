@@ -4,6 +4,8 @@ const path = require("path");
 var mongoose = require('mongoose');
 // connectDB = require('./config/db');
 require("dotenv/config");
+
+app.set('view engine', 'ejs');
 var Url = process.env.DATABASEURL || "mongodb://localhost:27017/url-short";
 mongoose.connect(Url, {useUnifiedTopology: true,useNewUrlParser: true})
   .then(() =>
@@ -11,15 +13,14 @@ mongoose.connect(Url, {useUnifiedTopology: true,useNewUrlParser: true})
   ).catch(err =>
     console.log(`Error connecting to MongoDB: ${err}`)
   );
+  // ExpressJS Middleware
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: false }));
 
-app.set('view engine', 'ejs');
+  // Static files middleware:
+  app.use(express.static(path.join(__dirname, "/public")));
+
 // connectDB(); //conect to database
-// ExpressJS Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-// Static files middleware:
-app.use(express.static(path.join(__dirname, "/public")));
 
 // Routes
 app.use("/", require("./routes/index"));
