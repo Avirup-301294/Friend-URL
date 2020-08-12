@@ -14,7 +14,7 @@ config   = require('config');
 
 router.post('/shorten', (req, res) => {
 	const { longUrl } = req.body;
-	const baseUrl = process.env.BASEURL;
+	const baseUrl = process.env.BASEURL || config.get('baseUrl');
 	// Checking if user is trying to shorted our URL
     if (longUrl.includes(baseUrl)) {
         return res.status(422).json({ msg: "Don't try to shorten our URL", statusCode: 422 });
