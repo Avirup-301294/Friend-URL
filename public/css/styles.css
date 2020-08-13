@@ -20,6 +20,18 @@ body {
     .container{
       padding: 40px 40px;
     }
+    .headEl a h2{
+      font-size: 22px;
+    }
+    .icon {
+    font-size: 15px;
+    }
+    .tag {
+      font-size: 22px;
+    }
+    .url {
+      font-size: 16px;
+    }
 }
 .icon{
   width: 55px;

@@ -14,11 +14,11 @@
   <body>
     <header>
       <nav class="navbar navbar-light bg-light">
-        <div style="margin: 0 auto;">
-          <a class="navbar-brand" href="/"><h2>URL Shortener Service</h2></a>
-              <a href="https://github.com/Avirup-301294">
+        <div style="margin: 0 auto;" class="headEl">
+            <a class="navbar-brand" href="/"><h2>URL Shortener Service</h2></a>
+            <a href="https://github.com/Avirup-301294">
                 <img class="icon" src="https://image.flaticon.com/icons/png/512/25/25231.png">
-              </a>
+            </a>
           </div>
       </nav>
     </header>
@@ -26,11 +26,12 @@
     <div class="container" style="padding-top:200px;">
         <div class="jumbotron" style="background: #ecf0f1;">
           <div class="text-center">
-            <h2><i class="fas fa-link animated rubberBand"></i> Enter The URL</h2>
+            <h2 class="tag"><i class="fas fa-link animated rubberBand"></i> Enter The URL</h2>
           </div>
             <div class="input-group input-group-lg">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-lg">URL</span>
+                  <span class="input-group-text" id="inputGroup-sizing-lg">
+                    <div class="url">URL</div></span>
                 </div>
                 <input type="text" class="form-control urlInput" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Paste your link here..." required >
             </div>
