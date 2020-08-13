@@ -12,34 +12,39 @@
     <title>Url Shortener Service</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div style="margin: 0 auto;">
-        <a class="navbar-brand" href="/"><h2>Friend Url</h2></a>
-            <a href="https://github.com/Avirup-301294">
-              <img class="icon" src="https://image.flaticon.com/icons/png/512/25/25231.png">
-            </a>
-        </div>
-    </nav>
-  <div class="container" style="padding-top:200px;">
-      <div class="jumbotron" style="background: #ecf0f1;">
-        <div class="text-center">
-          <h2><i class="fas fa-link animated rubberBand"></i> URL Shorterner Service</h2>
-        </div>
-          <!-- <div class="input-group input-group-lg">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Enter The URL</span>
-              </div> -->
-              <input type="text" class="form-control urlInput" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Paste your link here..." required >
-          <!-- </div> -->
-          <div class="text-center b">
-              <button class="btn btn-info btn-lg submit urlButton">Submit</button>
+    <header>
+      <nav class="navbar navbar-light bg-light">
+        <div style="margin: 0 auto;">
+          <a class="navbar-brand" href="/"><h2>URL Shortener Service</h2></a>
+              <a href="https://github.com/Avirup-301294">
+                <img class="icon" src="https://image.flaticon.com/icons/png/512/25/25231.png">
+              </a>
           </div>
-            <div class="results hidden text-center">
-              <button class="copy btn btn-success urlButton">Copy</button>
-              <a href="#" class="btn btn-primary clear hidden text-center">Clear</a>
+      </nav>
+    </header>
+  <main>
+    <div class="container" style="padding-top:200px;">
+        <div class="jumbotron" style="background: #ecf0f1;">
+          <div class="text-center">
+            <h2><i class="fas fa-link animated rubberBand"></i> Enter The URL</h2>
+          </div>
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">URL</span>
+                </div>
+                <input type="text" class="form-control urlInput" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Paste your link here..." required >
             </div>
-      </div>
-  </div>
+            <div class="text-center b">
+                <button class="btn btn-info submit urlButton">Submit</button>
+            </div>
+              <div class="results hidden text-center">
+                <button class="copy btn btn-success urlButton">Copy</button>
+                <a href="#" class="btn btn-primary clear hidden text-center">Clear</a>
+              </div>
+        </div>
+    </div>
+  </main>
+
       <script src="https://kit.fontawesome.com/b767bbfe51.js" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

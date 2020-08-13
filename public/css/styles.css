@@ -15,6 +15,12 @@ body {
 .b{
   margin-top: 10px;
 }
+
+@media (max-width: 600px) {
+    .container{
+      padding: 40px 40px;
+    }
+}
 .icon{
   width: 55px;
   height:60px;
