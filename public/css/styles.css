@@ -18,7 +18,7 @@ body {
 
 @media (max-width: 600px) {
     .container{
-      padding: 40px 40px;
+      padding: 30px 30px;
     }
     .headEl a h2{
       font-size: 22px;
